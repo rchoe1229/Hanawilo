@@ -22,8 +22,8 @@
  */
 var isPalindrome = function (x) {};
 
+// Testing
 const checkCases = [121, -121, 10, 0100, 01001];
 for (let i = 0; i < checkCases.length - 1; i++) {
   isPalindrome(checkCases[i]);
 }
-g
