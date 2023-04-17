@@ -26,4 +26,14 @@ var twoSum = function (nums, target) {};
 // Runs the method above with shown params
 const numbers = [2, 3, 4, 7, 15, 11, 13];
 const target = 11;
-twoSum(numbers, target);
+const answer = twoSum(numbers, target);
+
+function validate(answer) {
+  if (answer.includes(4) && answer.includes(7)) {
+    console.log(`Your answer was ${answer} and is valid`);
+  } else {
+    console.log(`Your answer was ${answer} and was not valid`);
+  }
+}
+
+validate(answer);

@@ -23,7 +23,16 @@
 var isPalindrome = function (x) {};
 
 // Testing
-const checkCases = [121, -121, 10, 0100, 01001];
+const checkCases = [121, -121, 10, 0100, 01001, 101, 55455];
+const palindromeAns = [true, false, false, false, false, true, true];
+let checkedCases = { passing: [], failing: [] };
 for (let i = 0; i < checkCases.length - 1; i++) {
-  isPalindrome(checkCases[i]);
+  const check = isPalindrome(checkCases[i]) === palindromeAns[i];
+  if (check) {
+    checkedCases.passing.push(checkCases[i]);
+  } else {
+    checkedCases.failing.push(checkCases[i]);
+  }
 }
+console.log(`Passing tests: ${checkedCases.passing}`);
+console.log(`Failing tests: ${checkedCases.failing}`);
